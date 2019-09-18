@@ -1,6 +1,5 @@
 # SEGA SATURN PAD
-
-PIN ASIGN
+## PIN ASIGN
 (Pad side. Shorter side is the upside. Numbering from right.)
 +--+---+-------+----------+
 |No|I/O| Color | Detail   |
