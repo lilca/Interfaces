@@ -15,6 +15,7 @@
 | 9|   | WHITE | GND      |
 
  I = Input to PAD
+ 
  O = Output from PAD
 
 ## FORMAT
