@@ -26,9 +26,9 @@
 | 1| 0|Start|   A|   C| B|
 | 1| 1|   LB|   1|   0| 0|
 
-a0,a1 = address(Input)
-d0-d3 = data(Output)
-(Button is pushed => Low level)
+ a0,a1 = address(Input)
+ d0-d3 = data(Output)
+ (Button is pushed => Low level)
 
 Reference
 セガサターンのコントロールパッドの解析
