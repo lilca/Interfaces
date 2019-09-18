@@ -33,6 +33,4 @@ d0-d3 = data(Output)
 (Button is pushed => Low level)
 
 ## Reference
-セガサターンのコントロールパッドの解析
-
-http://kaele.com/~kashima/games/saturn.html
+[セガサターンのコントロールパッドの解析](http://kaele.com/~kashima/games/saturn.html)
