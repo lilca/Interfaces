@@ -18,6 +18,7 @@
  O = Output from PAD
 
 ## FORMAT
+
 |Input|      Output      |
 |a1|a0|   d3|  d2|  d1|d0|
 |:-:|:-:|:-:|:-:|:-:|:-:|
