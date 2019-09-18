@@ -2,7 +2,7 @@
 ## PIN ASIGN
 (Pad side. Shorter side is the upside. Numbering from right.)
 |No|I/O| Color | Detail   |
-|:-:| | | |
+|:-:|:-|:-|:-|
 | 1| I | BRWON | VCC(5V)  |
 | 2| O | GREEN | data1    |
 | 3| O | BLACK | data0    |
