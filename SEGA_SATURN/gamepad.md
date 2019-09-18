@@ -1,9 +1,8 @@
 # SEGA SATURN PAD
 ## PIN ASIGN
 (Pad side. Shorter side is the upside. Numbering from right.)
-+--+---+-------+----------+
 |No|I/O| Color | Detail   |
-+--+---+-------+----------+
+|:-:| | | |
 | 1| I | BRWON | VCC(5V)  |
 | 2| O | GREEN | data1    |
 | 3| O | BLACK | data0    |
@@ -13,7 +12,6 @@
 | 7| O | YELLOW| data3    |
 | 8| O | GRAY  | data2    |
 | 9|   | WHITE | GND      |
-+--+---+-------+----------+
 I = Input to PAD
 O = Output from PAD
 
