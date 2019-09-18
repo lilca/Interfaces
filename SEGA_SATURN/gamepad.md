@@ -26,7 +26,7 @@
 | 0| 1|Right|Left|Down|Up|
 | 1| 0|Start|   A|   C| B|
 | 1| 1|   LB|   1|   0| 0|
-+--+--+-----+----+----+--+
+
 (Button is pushed => Low level)
 
 Reference
