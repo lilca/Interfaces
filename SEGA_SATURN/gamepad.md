@@ -19,8 +19,6 @@
 
 ## FORMAT
 
-|Input|      Output      |
-
 |a1|a0|   d3|  d2|  d1|d0|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | 0| 0|   RB|   X|   Y| Z|
@@ -28,6 +26,8 @@
 | 1| 0|Start|   A|   C| B|
 | 1| 1|   LB|   1|   0| 0|
 
+a0,a1 = address(Input)
+d0-d3 = data(Output)
 (Button is pushed => Low level)
 
 Reference
