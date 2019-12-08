@@ -1,0 +1,10 @@
+1|sync
+2|comp video
+3|green
+4|ground
+5|5v
+6|audio mono
+7|red
+8|blue
+
+標準din8は、同心円状にピンが並んでいないu型(262度)と同心円状にピンが並んだc型(270度)がありメガドライブはu型なので注意
