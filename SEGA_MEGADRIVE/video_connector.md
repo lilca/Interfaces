@@ -1,13 +1,13 @@
 |No||
 |:-:|:-:|
-|1|sync|
-|2|comp video|
-|3|green|
-|4|ground|
-|5|5v|
-|6|audio mono|
-|7|red|
-|8|blue|
+|1|Sync|
+|2|Comp Video|
+|3|Green|
+|4|GND|
+|5|5V|
+|6|Audio Mono|
+|7|Red|
+|8|Blue|
 
 ```
   _______
