@@ -34,3 +34,11 @@ GND                                                    GND
   \  1 2  /
    \-----/
 ```
+
+|STROBE|A/B SELECT|1Y|2Y|3Y|4Y|
+|:-|:-|:-|:-|:-|:-|
+|0|0|TR1|TR2|SELECT|RUN|
+|0|1|UP|RIGHT|DOWN|LEFT|
+|1|0|TR1|TR2|SELECT|RUN|
+|1|1|UP|RIGHT|DOWN|LEFT|
+
