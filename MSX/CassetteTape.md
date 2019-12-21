@@ -1,12 +1,25 @@
 # カセットテープインターフェース
 ## （０）プラグ
 ```
-   /----\
-  /      \
- |        |
-  \      /
-   \----/
+    -----
+   /     \
+  / 6   7 \
+ | 1  8  3 |
+  \ 4   5 /
+   \  2  /
+    -----
+オス側正面
 ```
+|ピン番号|特徴|
+|:-:|:--|
+|1|GND|
+|2|GND
+|3|GND|
+|4|SAVE端子|
+|5|LOAD端子|
+|6|REMOTE端子|
+|7|?|
+|8|GND|
 
 ## （１）ボーレート
 |ボーレート[bps]|特徴|
@@ -45,3 +58,4 @@ Startbit           1Byte Data              Stop bit
 
 ## （６）参照
 [２章カセット・インターフェースーテクハンwiki](http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan?page=2%BE%CF+%A5%AB%A5%BB%A5%C3%A5%C8%8E%A5%A5%A4%A5%F3%A5%BF%A1%BC%A5%D5%A5%A7%A5%A4%A5%B9)
+[piroyan's Lablog:カセットインターフェースの製作](http://lablog.piroyan.com/index.php?e=24)
