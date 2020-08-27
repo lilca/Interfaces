@@ -78,7 +78,7 @@ Startbit           1Byte Data              Stop bit
 ||データ３|256byte||
 ||：|||
 |最終ブロック|ショートヘッダ|1.7秒||
-||データＮ|256byte|この中の　0x1Ah(Ctrl+Z)End of file(EOF)|
+||データＮ|？byte|0x1Ah(Ctrl+Z = EOF)検出時に終了？|
 
 ### （５−３）マシン語ファイル
 
