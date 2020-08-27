@@ -52,7 +52,9 @@ Startbit           1Byte Data              Stop bit
 ||ショート|4800Hz x 8000wave|約1.7秒|
 
 ## （５）ファイルフォーマット
-### （５−１）BASICテキストファイル(CSAVE命令)
+### （５−１）BASICテキストファイル
+CSAVEやCLOADでセーブorロードされる、BASICプログラム
+
 |内容|長さ|備考|
 |:-|:-:|:-:|
 |ロングヘッダ|6.7秒||
@@ -63,7 +65,9 @@ Startbit           1Byte Data              Stop bit
 |BASICプログラム|任意|プログラムの長さによる|
 |0x00h * 7|7byte||
 
-### （５−２）ASCIIテクストファイル(SAVE命令)
+### （５−２）ASCIIテクストファイル
+SAVEやLOADでセーブorロードされる、BASICプログラム
+
 |内容||長さ|備考|
 |:-|:-:|:-:|:-:|
 |ロングヘッダ||6.7秒||
@@ -83,6 +87,8 @@ Startbit           1Byte Data              Stop bit
 * ***0x1Ah***を含むデータファイルは作れない
 
 ### （５−３）マシン語ファイル(BSAVE命令)
+BSAVEやBLOADでセーブorロードされる、マシン語ファイル
+
 
 
 ## （６）参照
