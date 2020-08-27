@@ -52,7 +52,7 @@ Startbit           1Byte Data              Stop bit
 ||ショート|4800Hz x 8000wave|約1.7秒|
 
 ## （５）ファイルフォーマット
-### （５−１）BASICテキストファイル
+### （５−１）BASICテキストファイル(CSAVE命令)
 |内容|長さ|備考|
 |:-|:-:|:-:|
 |ロングヘッダ|6.7秒||
@@ -63,7 +63,7 @@ Startbit           1Byte Data              Stop bit
 |BASICプログラム|任意|プログラムの長さによる|
 |0x00h * 7|7byte||
 
-### （５−２）ASCIIテクストファイル
+### （５−２）ASCIIテクストファイル(SAVE命令)
 |内容||長さ|備考|
 |:-|:-:|:-:|:-:|
 |ロングヘッダ||6.7秒||
@@ -82,7 +82,8 @@ Startbit           1Byte Data              Stop bit
 
 * ***0x1Ah***を含むデータファイルは作れない
 
-### （５−３）マシン語ファイル
+### （５−３）マシン語ファイル(BSAVE命令)
+
 
 ## （６）参照
 [２章カセット・インターフェースーテクハンwiki](http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan?page=2%BE%CF+%A5%AB%A5%BB%A5%C3%A5%C8%8E%A5%A5%A4%A5%F3%A5%BF%A1%BC%A5%D5%A5%A7%A5%A4%A5%B9)
