@@ -91,7 +91,17 @@ SAVEやLOADでセーブorロードされる、BASICプログラム
 ### （５−３）マシン語ファイル(BSAVE命令)
 BSAVEやBLOADでセーブorロードされる、マシン語ファイル
 
-
+|内容|長さ|備考|
+|:-|:-:|:-:|
+|ロングヘッダ|6.7秒||
+|0xD0h * 10|10byte||
+|ファイル名|6byte|6byte未満時、残りはスペース(0x20h)？|
+||?|無音(Blank Area)|
+|ショートヘッダ|1.7秒||
+|先頭アドレス|2byte||
+|最終アドレス|2byte||
+|開始アドレス|2byte||
+|プログラム本体|||
 
 ## （６）参照
 [２章カセット・インターフェースーテクハンwiki](http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan?page=2%BE%CF+%A5%AB%A5%BB%A5%C3%A5%C8%8E%A5%A5%A4%A5%F3%A5%BF%A1%BC%A5%D5%A5%A7%A5%A4%A5%B9)
