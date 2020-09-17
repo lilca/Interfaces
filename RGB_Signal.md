@@ -10,4 +10,6 @@
 
 ``` (TTL=5V) ```
 
+# 参考文献
+
 [RGB Video の同期信号](http://www.avis.ne.jp/~meteor/html/video-sync.html)
