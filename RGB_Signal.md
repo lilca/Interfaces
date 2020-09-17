@@ -8,4 +8,6 @@
 |H-Sync|TTL|
 |V-Sync|TTL|
 
+``` (TTL=5V) ```
+
 [RGB Video の同期信号](http://www.avis.ne.jp/~meteor/html/video-sync.html)
