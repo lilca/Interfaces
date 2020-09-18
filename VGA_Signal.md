@@ -32,15 +32,15 @@
 
 なし
 
-## 5線接続
+## 電圧レベル
 
-|端子|レベル(電圧)|周波数|周期|
-|:-|:-|:-|:-|
-|Red|0.7Vp-p|||
-|Green|0.7Vp-p|||
-|Blue|0.7Vp-p|||
-|H-Sync|TTL||31.96[us]|
-|V-Sync|TTL||16.62[ms]
+|端子|レベル(電圧)|
+|:-|:-|
+|Red|0.7Vp-p|
+|Green|0.7Vp-p|
+|Blue|0.7Vp-p|
+|H-Sync|TTL|
+|V-Sync|TTL|
 
 ``` (TTL=5V) ```
 
