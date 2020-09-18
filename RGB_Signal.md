@@ -11,5 +11,7 @@
 ``` (TTL=5V) ```
 
 # 参考文献
+
 [Arduinoを用いたVGA映像信号の出力](http://www.net.c.dendai.ac.jp/~anada/)
+
 [RGB Video の同期信号](http://www.avis.ne.jp/~meteor/html/video-sync.html)
