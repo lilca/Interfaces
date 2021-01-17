@@ -78,7 +78,7 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 |Long header|6.7s||
 |0xEAh * 10||10byte||
 |File Name||6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
-||?|Silent(Blank Area)|
+||-|Silent(Blank Area)|
 |Block 1|Short Header|1.7s||
 ||Data 1|256byte||
 |Block 2|Short Header|1.7s||
