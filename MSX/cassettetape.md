@@ -57,7 +57,7 @@ Startbit           1Byte Data              Stop bit
 A BASIC program file as binary data save and load with CSAVE and CLOAD.
 
 |Name|Length|Detail|
-|:-|:-:|:-:|
+|:-|:-:|:-|
 |Long Header|6.7s||
 |0xD3h * 10|10byte||
 |File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
@@ -70,7 +70,7 @@ A BASIC program file as binary data save and load with CSAVE and CLOAD.
 A BASIC program file as ascii data save and load with SAVE and LOAD.
 
 |Name||Length|Detail|
-|:-|:-:|:-:|:-:|
+|:-|:-:|:-:|:-|
 |Long header|6.7s||
 |0xEAh * 10||10byte||
 |File Name||6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
