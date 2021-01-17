@@ -13,14 +13,22 @@
 
 |No|I/O|Name|
 |:-:|:-:|:--|
-|1|-|GND|
-|2|-|GND
-|3|-|GND|
-|4||SAVE|
-|5||LOAD|
+|1|-|GND(*1)|
+|2|-|GND(*1)|
+|3|-|GND(*1)|
+|4|I|SAVE|
+|5|O|LOAD|
 |6||REMOTE|
-|7||?|
-|8|GND|
+|7|-|GND(*2)|
+|8|-|GND(*1)|
+
+(*1) Ground for SAVE and LOAD
+
+(*2) Ground for REMOTE
+
+I = Input to cassette tape
+
+O = Output from cassette tape
 
 ## BAUD RATE
 |Baudrate[bps]|Detail|
