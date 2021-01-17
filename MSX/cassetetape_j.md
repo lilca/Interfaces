@@ -54,7 +54,7 @@ Startbit           1Byte Data              Stop bit
 
 ## ファイルフォーマット
 ### BASICテキストファイル
-CSAVEやCLOADでセーブorロードされる、BASICプログラム
+CSAVEやCLOADで、バイナリセーブorバイナリロードされる、BASICプログラム
 
 |内容|長さ|備考|
 |:-|:-:|:-:|
