@@ -1,4 +1,17 @@
+## PC-ENGINE GAMEPAD
 
+## CONNECTOR
+
+```
+ MINI DIN8 JACK
+   /-----\
+  / 6 7 8 \
+ | 3 4   5 |
+  \  1 2  /
+   \-----/
+```
+
+## GAMEPAD INSIDE
 ```
            +-------------------------+
            |    R ARRAY( 47Kohm )    |+-------------------------o 1 : VCC(5V)
@@ -26,14 +39,7 @@
 GND                                                      GND
 ```
 
-```
- MINI DIN8 JACK
-   /-----\
-  / 6 7 8 \
- | 3 4   5 |
-  \  1 2  /
-   \-----/
-```
+## FORMAT
 
 |STROBE|A/B SELECT|1Y|2Y|3Y|4Y|
 |:-|:-|:-|:-|:-|:-|
@@ -42,3 +48,6 @@ GND                                                      GND
 |1|0|low|low|low|low|
 |1|1|low|low|low|low|
 
+## References
+
+[PCエンジンの連射機能付きコントローラー](http://rapidturbo2000.blog.fc2.com/blog-entry-95.html)
