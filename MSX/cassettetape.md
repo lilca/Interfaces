@@ -47,10 +47,10 @@ Startbit           1Byte Data              Stop bit
 ## HEADER
 |Baudrate[bps]|Header-Type|Detail|Time|
 |:-:|:-:|:-:|:-:|
-|1200|LONG|2400Hz x 16000wave|約6.7s|
-||SHORT|2400Hz x 4000wave|約1.7s|
-|2400|LONG|4800Hz x 32000wave|約6.7s|
-||SHORT|4800Hz x 8000wave|約1.7s|
+|1200|LONG|2400Hz x 16000wave|around 6.7s|
+||SHORT|2400Hz x 4000wave|around 1.7s|
+|2400|LONG|4800Hz x 32000wave|around 6.7s|
+||SHORT|4800Hz x 8000wave|around 1.7s|
 
 ## FILE FORMAT
 ### BASIC TEXT FILE
