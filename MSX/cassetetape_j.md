@@ -11,16 +11,16 @@
 ```
 ## ピン配置
 
-|ピン番号|I/O|名前|
-|:-:|:-:|:--|
-|1|-|GND|
-|2|-|GND
-|3|-|GND|
-|4||SAVE端子|
-|5||LOAD端子|
-|6||REMOTE端子|
-|7||?|
-|8|GND|
+|ピン番号|I/O|名前|詳細|
+|:-:|:-:|:-:|:-|
+|1|-|GND|SAVEとLOADに共通のGND|
+|2|-|GND|SAVEとLOADに共通のGND|
+|3|-|GND|SAVEとLOADに共通のGND|
+|4|I|SAVE端子|MSXからテープへの音声|
+|5|O|LOAD端子|テープからMSXへの音声|
+|6|O|REMOTE+|?|
+|7|O|REMOTE-|?|
+|8|GND|SAVEとLOADに共通のGND|
 
 ## ボーレート
 |ボーレート[bps]|特徴|
