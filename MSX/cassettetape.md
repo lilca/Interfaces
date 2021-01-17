@@ -75,14 +75,14 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 |0xEAh * 10||10byte||
 |File Name||6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
 ||?|Silent(Blank Area)|
-|ブロック１|ショートヘッダ|1.7秒||
-||データ１|256byte||
-|ブロック２|ショートヘッダ|1.7秒||
-||データ２|256byte||
-|ブロック３|ショートヘッダ|1.7秒||
-||データ３|256byte||
-||：|||
-|最終ブロック|ショートヘッダ|1.7秒||
+|Block 1|Short Header|1.7s||
+||Data 1|256byte||
+|Block 2|Short Header|1.7s||
+||Data 2|256byte||
+|Block 3|Short Header|1.7s||
+||Data 3|256byte||
+||:|||
+|最終ブロック|Short Header|1.7s||
 ||データＮ|？byte|0x1Ah(Ctrl+Z = EOF)検出時に終了？|
 
 ```
