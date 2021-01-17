@@ -18,13 +18,11 @@
 |3|-|GND(*1)|
 |4|I|SAVE|
 |5|O|LOAD|
-|6||REMOTE|
-|7|-|GND(*2)|
+|6|O|REMOTE+|
+|7|O|REMOTE-|
 |8|-|GND(*1)|
 
 (*1) Ground for SAVE and LOAD
-
-(*2) Ground for REMOTE
 
 I = Input to cassette tape
 
