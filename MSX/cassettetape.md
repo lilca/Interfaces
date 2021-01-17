@@ -105,7 +105,7 @@ A machine language file save and load with BSAVE and BLOAD.
 |Short Header|1.7s||
 |Beginning Address|2byte|Start address of program area|
 |Last Address|2byte|Last address of program area|
-|Start Address|2byte|Start execution at address (Valid only when R option was used in BLOAD)|
+|Start Address|2byte|Start execution at this address (Valid only when R option was used in BLOAD)|
 |Program Data|Last Address - Beginning Address + 1 byte||
 
 ## References
