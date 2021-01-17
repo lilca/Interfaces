@@ -61,7 +61,7 @@ A BASIC program file as binary data save and load with CSAVE and CLOAD.
 |Long Header|6.7s||
 |0xD3h * 10|10byte||
 |File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
-||?|無音(Blank Area)|
+||?|Silent(Blank Area)|
 |ショートヘッダ|1.7秒||
 |BASICプログラム|任意|プログラムの長さによる|
 |0x00h * 7|7byte||
@@ -74,7 +74,7 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 |Long header|6.7s||
 |0xEAh * 10||10byte||
 |File Name||6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
-||?|無音(Blank Area)|
+||?|Silent(Blank Area)|
 |ブロック１|ショートヘッダ|1.7秒||
 ||データ１|256byte||
 |ブロック２|ショートヘッダ|1.7秒||
@@ -94,15 +94,15 @@ A machine language file save and load with BSAVE and BLOAD.
 
 |Name|Length|Detail|
 |:-|:-:|:-:|
-|Long header|6.7s||
+|Long Header|6.7s||
 |0xD0h * 10|10byte||
 |File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
-||?|無音(Blank Area)|
-|ショートヘッダ|1.7秒||
-|先頭アドレス|2byte|プログラムの最初のアドレス|
-|最終アドレス|2byte|プログラムの最後のアドレス|
-|開始アドレス|2byte|実行開始されるアドレス(BLOADでRオプション時のみ有効)|
-|プログラム本体|最終アドレスー開始アドレス＋１byte||
+||?|Silent(Blank Area)|
+|Short Header|1.7s||
+|Beginning Address|2byte|Start address of program area|
+|Last Address|2byte|Last address of program area|
+|Start Address|2byte|Start execution at address (Valid only when R option was used in BLOAD)|
+|Program Data|Last Address - Beginning Address + 1 byte||
 
 ## References
 
