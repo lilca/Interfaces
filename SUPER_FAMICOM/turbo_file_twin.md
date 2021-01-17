@@ -34,5 +34,7 @@ SL = SELECT, ST = START, ID = Identification(High level)
 (Button is pushed => Low level)
 
 ## Reference
+
 [SFCコントローラの解析](http://familunker.web.fc2.com/electric/sfc_controller.html)
+
 [SFCコントローラの仕組みについて覚え書き](http://microkun.hatenablog.com/entry/2015/07/09/230114)
