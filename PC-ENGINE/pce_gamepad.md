@@ -12,7 +12,7 @@
 ```
 
 ## PIN ASSIGN
-|No|I/O||Name|Detail|
+|No|I/O|Name|Detail|
 |:-:|:-:|:-:|:-|
 |1|I|VCC||
 |2|O|UP or TR1|TR1 = Trigger1|
@@ -24,6 +24,7 @@
 |8|-|GND||
 
 I = Input to PAD
+
 O = Output from PAD
 
 ## GAMEPAD INSIDE
