@@ -1,4 +1,8 @@
 # SEGA SATURN PAD
+
+## CONNECTER
+
+
 ## PIN ASIGN
 (Pad side. Shorter side is the upside. Numbering from right.)
 
