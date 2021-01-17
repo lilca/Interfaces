@@ -20,7 +20,7 @@
 |4|O|DOWN or SELECT||
 |5|O|LEFT or RUN||
 |6|I|A/B SELECT|Act like button address|
-|7|I|STROBE|Button Data is read at the rising edge of this signal|
+|7|I|STROBE| Timing to read (when this signal is rised)|
 |8|-|GND||
 
 I = Input to PAD
