@@ -11,18 +11,16 @@
 ```
 ## PIN ASSIGN
 
-|No|I/O|Name|
-|:-:|:-:|:--|
-|1|-|GND(*1)|
-|2|-|GND(*1)|
-|3|-|GND(*1)|
-|4|I|SAVE|
-|5|O|LOAD|
-|6|O|REMOTE+|
-|7|O|REMOTE-|
-|8|-|GND(*1)|
-
-(*1) Ground for SAVE and LOAD
+|No|I/O|Name|Detail|
+|:-:|:-:|:-:|:--
+|1|-|GND(*1)|Ground for SAVE and LOAD|
+|2|-|GND(*1)|Ground for SAVE and LOAD|
+|3|-|GND(*1)|Ground for SAVE and LOAD|
+|4|I|SAVE|Sound to tape from MSX|
+|5|O|LOAD|Sound from MSX to tape|
+|6|O|REMOTE+|?|
+|7|O|REMOTE-|?|
+|8|-|GND(*1)|Ground for SAVE and LOAD|
 
 I = Input to cassette tape
 
