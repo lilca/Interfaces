@@ -93,11 +93,11 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 A machine language file save and load with BSAVE and BLOAD.
 
 |Name|Length|Detail|
-|:-|:-:|:-:|
+|:-|:-:|:-|
 |Long Header|6.7s||
 |0xD0h * 10|10byte||
 |File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
-||?|Silent(Blank Area)|
+||-|Silent(Blank Area)|
 |Short Header|1.7s||
 |Beginning Address|2byte|Start address of program area|
 |Last Address|2byte|Last address of program area|
