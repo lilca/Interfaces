@@ -90,7 +90,7 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 ||Data Ｎ|-byte|0x1Ah(Ctrl+Z = EOF)Ends when EOF is detected?|
 
 ```
-0x1Ahを含むデータファイルは作れない
+Do not include 0x1Ah
 ```
 
 ### MACHINE LANGUAGE FILE
