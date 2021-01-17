@@ -3,7 +3,7 @@
 ## CONNECTOR
 
 ```
- MINI DIN8 JACK
+ MINI DIN8 JACK (Cable side)
    /-----\
   / 6 7 8 \
  | 3 4   5 |
@@ -12,31 +12,34 @@
 ```
 
 ## PIN ASSIGN
-|No|Name|Detail|
-|:-:|:-:|:-|
-|1|VCC||
-|2|UP or TR1|TR1 = Trigger1|
-|3|RIGHT or TR2|TR2 = Trigger2|
-|4|DOWN or SELECT||
-|5|LEFT or RUN||
-|6|A/B SELECT|Act like button address|
-|7|STROBE|Button data is read at the rising edge of this signal|
-|8|GND||
+|No|I/O||Name|Detail|
+|:-:|:-:|:-:|:-|
+|1|I|VCC||
+|2|O|UP or TR1|TR1 = Trigger1|
+|3|O|RIGHT or TR2|TR2 = Trigger2|
+|4|O|DOWN or SELECT||
+|5|O|LEFT or RUN||
+|6|I|A/B SELECT|Act like button address|
+|7|I|STROBE|Button Data is read at the rising edge of this signal|
+|8|-|GND||
+
+I = Input to PAD
+O = Output from PAD
 
 ## GAMEPAD INSIDE
 ```
            +-------------------------+
            |    R ARRAY( 47Kohm )    |+-------------------------o 1 : VCC(5V)
            +-------------------------+   +---------+
-     ___    | | | |           | | | |    |         |
- +---o o----+----------------------------+ 1A   1Y |---^^^------o 2 : UP & TR1
- | TRIGGER 1  | | |    ___    | | | |    |         |  330ohm
- +---------------------o o----+----------+ 1B   2Y |---^^^------o 3 : RIGHT & TR2
- |   ___      | | |    UP       | | |    |         |  330ohm
- +---o o------+--------------------------+ 2A   3Y |---^^^------o 4 : DOWN & SELECT
- | TRIGGER 2    | |    ___      | | |    |         |  330ohm
- +---------------------o o------+--------+ 2B   4Y |---^^^------o 5 : LEFT & RUN
- |   ___        | |   RIGHT       | |    |     _   |  330ohm
+     ___    | | | |           | | | |    |         |                                --+
+ +---o o----+----------------------------+ 1A   1Y |---^^^------o 2 : UP & TR1        |
+ | TRIGGER 1  | | |    ___    | | | |    |         |  330ohm                          |
+ +---------------------o o----+----------+ 1B   2Y |---^^^------o 3 : RIGHT & TR2     |
+ |   ___      | | |    UP       | | |    |         |  330ohm                          | Button Data
+ +---o o------+--------------------------+ 2A   3Y |---^^^------o 4 : DOWN & SELECT   |
+ | TRIGGER 2    | |    ___      | | |    |         |  330ohm                          |
+ +---------------------o o------+--------+ 2B   4Y |---^^^------o 5 : LEFT & RUN      |
+ |   ___        | |   RIGHT       | |    |     _   |  330ohm                        --+
  +---o o--------+------------------------+ 3A  A/B |------------o 6 : A/B SELECT
  |  SELECT        |    ___        | |    |         |
  +---------------------o o--------+------+ 3B      |
