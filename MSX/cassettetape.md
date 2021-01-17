@@ -56,11 +56,11 @@ Startbit           1Byte Data              Stop bit
 ### BASIC TEXT FILE
 A BASIC program file as binary data save and load with CSAVE and CLOAD.
 
-|内容|長さ|備考|
+|Name|Length|Detail|
 |:-|:-:|:-:|
-|ロングヘッダ|6.7秒||
+|Long Header|6.7s||
 |0xD3h * 10|10byte||
-|ファイル名|6byte|6byte未満時、残りはスペース(0x20h)？|
+|File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
 ||?|無音(Blank Area)|
 |ショートヘッダ|1.7秒||
 |BASICプログラム|任意|プログラムの長さによる|
@@ -69,11 +69,11 @@ A BASIC program file as binary data save and load with CSAVE and CLOAD.
 ### ASCII TEXT FILE
 A BASIC program file as ascii data save and load with SAVE and LOAD.
 
-|内容||長さ|備考|
+|Name||Length|Detail|
 |:-|:-:|:-:|:-:|
-|ロングヘッダ||6.7秒||
+|Long header|6.7s||
 |0xEAh * 10||10byte||
-|ファイル名||6byte|6byte未満時、残りはスペース(0x20h)？|
+|File Name||6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
 ||?|無音(Blank Area)|
 |ブロック１|ショートヘッダ|1.7秒||
 ||データ１|256byte||
@@ -92,11 +92,11 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 ### MACHINE LANGUAGE FILE
 A machine language file save and load with BSAVE and BLOAD.
 
-|内容|長さ|備考|
+|Name|Length|Detail|
 |:-|:-:|:-:|
-|ロングヘッダ|6.7秒||
+|Long header|6.7s||
 |0xD0h * 10|10byte||
-|ファイル名|6byte|6byte未満時、残りはスペース(0x20h)？|
+|File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
 ||?|無音(Blank Area)|
 |ショートヘッダ|1.7秒||
 |先頭アドレス|2byte|プログラムの最初のアドレス|
