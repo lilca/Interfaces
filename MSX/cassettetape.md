@@ -1,5 +1,5 @@
-# MSXカセットテープインターフェース
-## コネクタ（ケーブル側）
+# MSX CASSETE TYPE INTERFACE
+## CONNECTOR (Cable side)
 ```
     -----
    /     \
@@ -9,34 +9,34 @@
    \  2  /
     -----
 ```
-## ピン配置
+## PIN ASSIGN
 
-|ピン番号|I/O|名前|
+|No|I/O|Name|
 |:-:|:-:|:--|
 |1|-|GND|
 |2|-|GND
 |3|-|GND|
-|4||SAVE端子|
-|5||LOAD端子|
-|6||REMOTE端子|
+|4||SAVE|
+|5||LOAD|
+|6||REMOTE|
 |7||?|
 |8|GND|
 
-## ボーレート
-|ボーレート[bps]|特徴|
+## BAUD RATE
+|Baudrate[bps]|Detail|
 |:-:|:--|
-|1200|低スピード・高信頼|
-|2400|高スピード・低信頼|
+|1200|Low speed - High trust|
+|2400|High speed - Low trust|
 
-## １ビット
-|ボーレット[bps]|ビット|波形|説明|
+## 1 BIT
+|Baudrate[bps]|Bit|Wave|Detail|
 |:-:|:-:|:-|:-:|
 |1200|0|\_\_\_\_----|1200Hz x 1wave|
 ||1|\_\_--\_\_--|2400Hz x 2wave|
 |2400|0|\_\_--|2400Hz x 1wave|
 ||1|\_-\_-|4800Hz x 2wave|
 
-## １バイト
+## 1 BYTE
 ```
         LSB                             MSB
 ...| 0 | X | X | X | X | X | X | X | X | X | 1 | 1 |...
@@ -44,16 +44,16 @@
 Startbit           1Byte Data              Stop bit
 ```
 
-## ヘッダ
-|ボーレット[bps]|ヘッダ種類|詳細|時間|
+## HEADER
+|Baudrate[bps]|Header-Type|Detail|Time|
 |:-:|:-:|:-:|:-:|
-|1200|ロング|2400Hz x 16000wave|約6.7秒|
-||ショート|2400Hz x 4000wave|約1.7秒|
-|2400|ロング|4800Hz x 32000wave|約6.7秒|
-||ショート|4800Hz x 8000wave|約1.7秒|
+|1200|LONG|2400Hz x 16000wave|約6.7s|
+||SHORT|2400Hz x 4000wave|約1.7s|
+|2400|LONG|4800Hz x 32000wave|約6.7s|
+||SHORT|4800Hz x 8000wave|約1.7s|
 
-## ファイルフォーマット
-### BASICテキストファイル
+## FILE FORMAT
+### BASIC TEXT FILE
 CSAVEやCLOADでセーブorロードされる、BASICプログラム
 
 |内容|長さ|備考|
@@ -66,7 +66,7 @@ CSAVEやCLOADでセーブorロードされる、BASICプログラム
 |BASICプログラム|任意|プログラムの長さによる|
 |0x00h * 7|7byte||
 
-### ASCIIテキストファイル
+### ASCII TEXT FILE
 SAVEやLOADでセーブorロードされる、BASICプログラム
 
 |内容||長さ|備考|
@@ -89,7 +89,7 @@ SAVEやLOADでセーブorロードされる、BASICプログラム
 0x1Ahを含むデータファイルは作れない
 ```
 
-### マシン語ファイル(BSAVE命令)
+### MACHINE LANGUAGE FILE
 BSAVEやBLOADでセーブorロードされる、マシン語ファイル
 
 |内容|長さ|備考|
@@ -104,7 +104,7 @@ BSAVEやBLOADでセーブorロードされる、マシン語ファイル
 |開始アドレス|2byte|実行開始されるアドレス(BLOADでRオプション時のみ有効)|
 |プログラム本体|最終アドレスー開始アドレス＋１byte||
 
-## 参照
+## References
 
 [２章カセット・インターフェースーテクハンwiki](http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan?page=2%BE%CF+%A5%AB%A5%BB%A5%C3%A5%C8%8E%A5%A5%A4%A5%F3%A5%BF%A1%BC%A5%D5%A5%A7%A5%A4%A5%B9)
 
