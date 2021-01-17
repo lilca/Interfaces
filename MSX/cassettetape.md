@@ -54,7 +54,7 @@ Startbit           1Byte Data              Stop bit
 
 ## FILE FORMAT
 ### BASIC TEXT FILE
-CSAVEやCLOADでセーブorロードされる、BASICプログラム
+A BASIC program file save and load with CSAVE and CLOAD.
 
 |内容|長さ|備考|
 |:-|:-:|:-:|
@@ -67,7 +67,7 @@ CSAVEやCLOADでセーブorロードされる、BASICプログラム
 |0x00h * 7|7byte||
 
 ### ASCII TEXT FILE
-SAVEやLOADでセーブorロードされる、BASICプログラム
+A BASIC program file save and load with SAVE and LOAD.
 
 |内容||長さ|備考|
 |:-|:-:|:-:|:-:|
@@ -90,7 +90,7 @@ SAVEやLOADでセーブorロードされる、BASICプログラム
 ```
 
 ### MACHINE LANGUAGE FILE
-BSAVEやBLOADでセーブorロードされる、マシン語ファイル
+A machine language file save and load with BSAVE and BLOAD.
 
 |内容|長さ|備考|
 |:-|:-:|:-:|
