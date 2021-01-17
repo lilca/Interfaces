@@ -20,7 +20,7 @@
 |5|O|LOAD端子|テープからMSXへの音声|
 |6|O|REMOTE+|?|
 |7|O|REMOTE-|?|
-|8|GND|SAVEとLOADに共通のGND|
+|8|-|GND|SAVEとLOADに共通のGND|
 
 ## ボーレート
 |ボーレート[bps]|特徴|
