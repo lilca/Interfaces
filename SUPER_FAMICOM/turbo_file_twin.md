@@ -15,7 +15,7 @@
  
  O = Output from PAD
  
-## CONNECTER
+## CONNECTOR
 
 ```
  /------+---------+
