@@ -29,7 +29,7 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |DAT1| B| Y|SL|ST|UP|DW|LF|RT| A| X| L| R|ID|ID|ID|ID| B| Y|SL|...|
 
-SL = SELECT, ST = START, ID = Identification(High level)
+SL = SELECT, ST = START, DW = Down, LF = Left, RT = Right, ID = Identification(High level)
 
 (Button is pushed => Low level)
 
