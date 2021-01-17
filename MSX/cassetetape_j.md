@@ -67,7 +67,7 @@ CSAVEやCLOADで、バイナリセーブorバイナリロードされる、BASIC
 |0x00h * 7|7byte||
 
 ### ASCIIテキストファイル
-SAVEやLOADでセーブorロードされる、BASICプログラム
+SAVEやLOADで、アスキーセーブorアスキーロードされる、BASICプログラム
 
 |内容||長さ|備考|
 |:-|:-:|:-:|:-:|
