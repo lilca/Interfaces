@@ -61,9 +61,9 @@ A BASIC program file as binary data save and load with CSAVE and CLOAD.
 |Long Header|6.7s||
 |0xD3h * 10|10byte||
 |File Name|6byte|When less 6byte, allocate Space(0x20h?) for the shortage|
-||?|Silent(Blank Area)|
-|ショートヘッダ|1.7秒||
-|BASICプログラム|任意|プログラムの長さによる|
+||-|Silent(Blank Area)|
+|Short Header|1.7s||
+|BASIC Program|N|N = Program length|
 |0x00h * 7|7byte||
 
 ### ASCII TEXT FILE
