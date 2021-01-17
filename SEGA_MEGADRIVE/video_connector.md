@@ -1,3 +1,5 @@
+# SEGA MEGADRIVE VIDEO CONNECTOR
+
 |No||
 |:-:|:-:|
 |1|Sync|
