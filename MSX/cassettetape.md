@@ -82,8 +82,8 @@ A BASIC program file as ascii data save and load with SAVE and LOAD.
 |Block 3|Short Header|1.7s||
 ||Data 3|256byte||
 ||:|||
-|最終ブロック|Short Header|1.7s||
-||データＮ|？byte|0x1Ah(Ctrl+Z = EOF)検出時に終了？|
+|Block N|Short Header|1.7s||
+||Data Ｎ|-byte|0x1Ah(Ctrl+Z = EOF)Ends when EOF is detected?|
 
 ```
 0x1Ahを含むデータファイルは作れない
