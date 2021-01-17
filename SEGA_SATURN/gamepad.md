@@ -1,6 +1,6 @@
 # SEGA SATURN PAD
 
-## CONNECTER
+## CONNECTOR
 (Pad side. Shorter side is the upside. Numbering from right.)
 
 ```
