@@ -1,4 +1,4 @@
-# FAMICOM PAD
+# FAMICOM GAMEPAD
 ## PIN ASIGN
 
 ### Controller I
