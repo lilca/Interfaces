@@ -1,4 +1,4 @@
-# NINTENDO SUPER FAMICOM PAD
+# SUPER FAMICOM PAD
 ## PIN ASIGN
 
 |No|I/O| Name   | Detail   |
