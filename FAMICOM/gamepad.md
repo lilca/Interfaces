@@ -57,3 +57,5 @@ SL = SELECT, ST = START, DW = Down, LF = Left, RT = Right, ID = Identification(H
 ## Reference
 
 [ファミコン本体の回路図 | 電子機器 Junker](https://green.ap.teacup.com/junker/116.html)
+[NES研究室ージョイパッド](http://hp.vector.co.jp/authors/VA042397/nes/joypad.html)
+[NESdev wiki - Controller reading](https://wiki.nesdev.com/w/index.php/Controller_reading)
