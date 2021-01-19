@@ -4,21 +4,21 @@
 ### Controller I
 |No|I/O|Color| Name   | Detail   |
 |:-:|:-:|:-:|:-|:-|
-| 1| - |BROWN | GND      | Ground |
-| 2| ? |RED   | 4016_D0$ | ? |
-| 3| ? |ORANGE| OUT0     | ? |
-| 4| ? |YELLOW| 4016_CPU$| ? |
-| 5| I |WHITE | VCC      | 5V |
+| 1| - |BROWN | GND | Ground |
+| 2| O |RED   | DATA| 結果 |
+| 3| I |ORANGE| P/S | Act like counter reset when $4016.D0 was write. 1->0|
+| 4| I |YELLOW| CLK | Shift register in controllerI when $4016 was read. D0  返す|
+| 5| I |WHITE | VCC | 5V |
 
 ### Controller II
 |No|I/O|Color| Name   | Detail   |
 |:-:|:-:|:-:|:-|:-|
-| 1| O |BROWN | MIC OUT  | Output from mic on controller|
-| 2| - |RED   | GND      | Ground |
-| 3| ? |ORANGE| 4017_D0$ | ? |
-| 4| ? |YELLOW| OUT0     | ? |
-| 5| ? |WHITE | 4017_CUP$| ? |
-| 6| I |BLUE  | VCC      | 5V |
+| 1| O |BROWN | MIC OUT| Output from mic on controller|
+| 2| - |RED   | GND    | Ground |
+| 3| O |ORANGE| DATA   | ? |
+| 4| I |YELLOW| P/S    | ? |
+| 5| I |WHITE | CLK    | ? |
+| 6| I |BLUE  | VCC    | 5V |
 
  I = Input to PAD
  
