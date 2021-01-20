@@ -1,4 +1,12 @@
 # SUPER FAMICOM PAD
+## CONNECTOR
+
+```
+ /------+---------+
+| 1 2 3 | 4 5 6 7 |
+ \------+---------+
+```
+
 ## PIN ASIGN
 
 |No|I/O| Name   | Detail   |
@@ -15,14 +23,6 @@
  
  O = Output from PAD
  
-## CONNECTOR
-
-```
- /------+---------+
-| 1 2 3 | 4 5 6 7 |
- \------+---------+
-```
-
 ## FORMAT
 
 Super Famicom PAD communicate in serial communication
