@@ -5,8 +5,8 @@
 
 ```
  /---------\
-| 9 8 7 6 5 |
- \ 1 2 3 4 /
+| 5 4 3 2 1 |
+ \ 9 8 7 6 /
   \-------/
 +-------------------+
 ```
@@ -15,15 +15,15 @@
 
 |No|I/O| Color | Detail   |
 |:-:|:-:|:-|:-|
-| 1| I | BRWON | VCC(5V)  |
-| 2| O | GREEN | data1    |
-| 3| O | BLACK | data0    |
-| 4| I | RED   | address0 |
-| 5| I | ORANGE| address1 |
-| 6| O | BLUE  | VCC(5V)  |
-| 7| O | YELLOW| data3    |
-| 8| O | GRAY  | data2    |
-| 9|   | WHITE | GND      |
+| 1| I | -     | data0    |
+| 2| O | -     | data1    |
+| 3| O | -     | data2    |
+| 4| I | -     | data3    |
+| 5| I | -     | VCC(5V)  |
+| 6| O | -     | data4    |
+| 7| O | -     | address(selector)    |
+| 8| O | -     | GND      |
+| 9|   | -     | data5    |
 
  I = Input to PAD
  
