@@ -15,15 +15,15 @@
 
 |No|I/O| Color | Detail   |
 |:-:|:-:|:-|:-|
-| 1| I | -     | data0    |
+| 1| O | -     | data0    |
 | 2| O | -     | data1    |
 | 3| O | -     | data2    |
-| 4| I | -     | data3    |
+| 4| O | -     | data3    |
 | 5| I | -     | VCC(5V)  |
 | 6| O | -     | data4    |
-| 7| O | -     | address(selector)    |
-| 8| O | -     | GND      |
-| 9|   | -     | data5    |
+| 7| I | -     | address(selector)    |
+| 8| - | -     | GND      |
+| 9| O | -     | data5    |
 
  I = Input to PAD
  
