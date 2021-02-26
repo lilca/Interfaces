@@ -1,4 +1,4 @@
-# SEGA SATURN PAD
+# SEGA MEGA DRIVE PAD
 
 ## CONNECTOR
 (Pad side. Shorter side is the upside. Numbering from right.)
