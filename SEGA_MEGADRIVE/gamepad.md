@@ -32,9 +32,9 @@
 ## FORMAT
 
 |a0| d5 | d4|     d3|   d2|    d1|  d0|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 0|Start| A | LOW  | LOW | Down | UP |
-| 1| C   | B | Right| Left| Down | Up |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0|START| A | low  | low | DOWN | UP |
+| 1| C   | B | RIGHT| LEFT| DOWN | UP |
 
 a0 = address(Input)
  
