@@ -31,16 +31,14 @@
 
 ## FORMAT
 
-|a1|a0|   d3|  d2|  d1|d0|
+|a0| d5 | d4|     d3|   d2|    d1|  d0|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 0| 0|   RB|   X|   Y| Z|
-| 0| 1|Right|Left|Down|Up|
-| 1| 0|Start|   A|   C| B|
-| 1| 1|   LB|   1|   0| 0|
+| 0|Start| A | LOW  | LOW | Down | UP |
+| 1| C   | B | Right| Left| Down | Up |
 
-a0,a1 = address(Input)
+a0 = address(Input)
  
-d0-d3 = data(Output)
+d0-d5 = data(Output)
  
 (Button is pushed => Low level)
 
