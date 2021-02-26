@@ -45,4 +45,6 @@ d0-d3 = data(Output)
 (Button is pushed => Low level)
 
 ## Reference
+
+[セガ メガドライブ　６ボタンパッドの読み取り方](https://applause.elfmimi.jp/md6bpad.html)
 [セガサターンのコントロールパッドの解析](http://kaele.com/~kashima/games/saturn.html)
