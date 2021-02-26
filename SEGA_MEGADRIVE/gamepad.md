@@ -29,7 +29,7 @@
  
  O = Output from PAD
 
-## GAMEPAD INSIDE
+## GAMEPAD INSIDE(editing)
 ```
            +-------------------------+
            |    R ARRAY( 47Kohm )    |+-------|-----------------o 5 : VCC(5V)
