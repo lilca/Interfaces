@@ -29,6 +29,21 @@
 ```
 ?
 ```
+## GAMEPAD INSIDE
+
+```
++---------+
+|hef4021bp|
+|P7    VCC|
+|Q5     P6|
+|Q7     P5|
+|P3     P4|
+|P2     Q6|
+|P1     DS|
+|p0    CLK|
+|GND   P/S|
++---------+
+```
 
 ## FORMAT
 
