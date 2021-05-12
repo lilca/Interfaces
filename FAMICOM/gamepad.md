@@ -30,19 +30,24 @@
 ?
 ```
 ## GAMEPAD INSIDE
-
+ 
+### Controller I
 ```
-+---------+
-|hef4021bp|
-|P7    VCC|
-|Q5     P6|
-|Q7     P5|
-|P3     P4|
-|P2     Q6|
-|P1     DS|
-|p0    CLK|
-|GND   P/S|
-+---------+
+
+     UP    +---------+
+    ----
+-----  --- 
+DOWN |hef4021bp|
+LEFT |P7    VCC|
+RIGHT |Q5     P6|
+ |Q7     P5|
+ |P3     P4|
+ |P2     Q6|
+ |P1     SD|
+ |P0    CLK|
+ |GND   P/S|
+ +---------+
+
 ```
 
 ## FORMAT
