@@ -34,19 +34,23 @@
 ### Controller I
 ```
 
-     UP    +---------+
-    ----
------  --- 
-DOWN |hef4021bp|
-LEFT |P7    VCC|
-RIGHT |Q5     P6|
- |Q7     P5|
- |P3     P4|
- |P2     Q6|
- |P1     SD|
- |P0    CLK|
- |GND   P/S|
- +---------+
+   ___
+---o o ---
+    UP    ___
+----------o o--- +----v----+
+    ___   DOWN   |          hef4021bp|
+----o o-------   |P3       |P7    VCC|                                                                                                                                                                                                           
+     UP   ___    |         |Q5     P6|
+----------o o----|P2         |Q7     P5|
+    ___   DOWN   |         |P3     P4|
+----o o----------|P1       |P2     Q6|
+   RIGHT  ___    |         | P1     SD|
+----------o o----|P0    CLK|
+    ___   LEFT   |GND   P/S|
+----o o--------- +---------+
+   START  ___
+----------o o---
+         SELECT
 白 VCC
 橙 P/S
 黄 CLK
