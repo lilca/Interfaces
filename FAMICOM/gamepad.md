@@ -47,7 +47,11 @@ RIGHT |Q5     P6|
  |P0    CLK|
  |GND   P/S|
  +---------+
-
+白 VCC
+橙 P/S
+黄 CLK
+茶 GND SD
+赤 Q7
 ```
 
 ## FORMAT
