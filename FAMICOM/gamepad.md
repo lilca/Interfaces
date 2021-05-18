@@ -36,7 +36,7 @@
 
      ___
  +---o o------------------------------------+
-|   SELECT ___                              |
+ |  SELECT ___                              |
  +---------o o---------------------------+  |
  |   ___  START                          |  |
  +---o o------------------------------+  |  |
@@ -106,3 +106,5 @@ SL = SELECT, ST = START, DW = Down, LF = Left, RT = Right, ID = Identification(H
 [NES研究室ージョイパッド](http://hp.vector.co.jp/authors/VA042397/nes/joypad.html)
 
 [NESdev wiki - Controller reading](https://wiki.nesdev.com/w/index.php/Controller_reading)
+
+[ミニファミコンばりの“驚きの白さ”に？ 黄ばんだファミコンを分解&クリーニングしてみた](https://www.google.com/amp/s/kakakumag.com/amp/game/%3fid=9564)
