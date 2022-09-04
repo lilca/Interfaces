@@ -1,6 +1,6 @@
-#PC-ENGINE EXT-BUS
+# PC-ENGINE EXT-BUS
 
-##PIN ASSIGN
+## PIN ASSIGN
 |  |  A |B|C|
 |:-:|:-:|:-:|:-:|
 | 1|Audio Left||Audio Right|
