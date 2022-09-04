@@ -26,3 +26,6 @@
 |21|5V||GND|
 |22|Sync||Composite|
 |23|Blue|Green|Red|
+
+## References
+[
