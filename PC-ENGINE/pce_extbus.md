@@ -28,4 +28,5 @@
 |23|Blue|Green|Red|
 
 ## References
-[
+
+[ゲームロボット／ゼムネス PCエンジン用RGBブースター](http://fc2canned.blog54.fc2.com/blog-entry-1031.html)
