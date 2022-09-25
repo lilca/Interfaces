@@ -5,9 +5,8 @@
 
 ```
   _______
- / 7   1 \
-|    8    |
-| 6     2 |
+ /       \
+| 6  8  2 |
 |  5   3  |
  \   4   /
   -------
@@ -17,7 +16,7 @@
 
 |No|Detail|
 |:-:|:-:|
-|1|Composit/RGB(?) Sync|
+|1||
 |2|Composit Video|
 |3|RGB Green|
 |4|GND|
@@ -30,4 +29,4 @@ Note that DIN8 has U-type(262 degrees) and C-type(270 degrees). MEGADRIVE is U-t
 
 ## References
 
-[Sega Genesis/Master A/V pinout](https://pinouts.ru/Game/sega1_pinout.shtml)
+[TOKYO RGB HOSPICE](https://pinouts.ru/Game/sega1_pinout.shtml](http://dempa.jp/rgb/heaven/g_sc3000.html)
