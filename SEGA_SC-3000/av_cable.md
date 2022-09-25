@@ -20,7 +20,7 @@
 |2|GND|
 |3|Composit Video|
 |4|5V|
-|5|NC|
+|5|-|
 
 Note that DIN8 has U-type(262 degrees) and C-type(270 degrees). MEGADRIVE is U-type.
 
