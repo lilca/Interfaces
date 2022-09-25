@@ -22,7 +22,7 @@
 |4|5V|
 |5|-|
 
-Note that connector is DIN5.
+Note that it can also be used with Mega Drive, Master System, and Mark 3.
 
 ## References
 
