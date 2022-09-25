@@ -29,4 +29,4 @@ Note that DIN8 has U-type(262 degrees) and C-type(270 degrees). MEGADRIVE is U-t
 
 ## References
 
-[TOKYO RGB HOSPICE](https://pinouts.ru/Game/sega1_pinout.shtml](http://dempa.jp/rgb/heaven/g_sc3000.html)
+[TOKYO RGB HOSPICE](http://dempa.jp/rgb/heaven/g_sc3000.html)
