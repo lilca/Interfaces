@@ -22,7 +22,7 @@
 |4|5V|
 |5|-|
 
-Note that DIN8 has U-type(262 degrees) and C-type(270 degrees). MEGADRIVE is U-type.
+Note that connector is DIN5.
 
 ## References
 
