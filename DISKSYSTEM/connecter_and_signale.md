@@ -1,3 +1,0 @@
-# コネクタ
-
-## References
