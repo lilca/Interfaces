@@ -1,4 +1,5 @@
 Editing now.
+[ここの情報を整理しようと思う](http://kitahei88.blog.fc2.com/blog-category-4-2.html)
 
 # Signal(信号)
 ## Ram Adapter <-> Disk Drive
