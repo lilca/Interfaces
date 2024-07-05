@@ -28,7 +28,7 @@
  
  O = Output from PAD
 
-(Buttons are short circuit sinmply)
+(Buttons are short circuit simply)
 
 ## Reference
 [THE・ATARI](https://nesmd.nomaki.jp/gemepad.html)
