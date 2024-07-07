@@ -10,4 +10,5 @@
 9	ボタン2
 
 # 参考文献
+
 (SEGA MASTER SYSTEM:Consoles Unleashed)[https://www.consolesunleashed.com/tech/sega-master-system/]
