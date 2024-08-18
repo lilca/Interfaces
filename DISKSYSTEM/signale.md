@@ -5,6 +5,9 @@ Editing now.
 - 付属のRAMアダプターがツルツルがプロテクトなし、ザラザラはプロテクト有り
 - ドライブ基板の番号が01~03はプロテクトなし、04と05はプロテクト有り
 
+## 参考文献
+[FDS Stickでディスクシステムのゲームを書き込んでみる](https://ameblo.jp/koudaken7777/entry-12648274550.html)
+
 # Signal(信号)
 ## Ram Adapter <-> Disk Drive
 ### Connector
