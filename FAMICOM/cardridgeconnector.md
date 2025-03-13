@@ -5,6 +5,8 @@
 2.54mm ピッチ
 
 ```
+先頭の ! は反転
+
          /--------*
         /         |
     GND |         | RF Vcc
@@ -20,6 +22,17 @@ CPU A03 |
 CPU A02 |
 CPU A01 |
 CPU A00 |
-CPU <strong style="text-decoration: overline;">R/W</strong>    |     | <strong style="text-decoration: overline;">ROMSEL</strong>(<strong style="text-decoration: overline;">A15</strong>+<strong style="text-decoration: overline;">φ2</strong>
+CPU !R/W |     | !ROMSEL(!A15+!φ2)
+!IRQ
+GND
+PPU !RD
+VRAM !A10
+PPU A06
+PPU A06
+PPU A06
+PPU A06
+PPU A06
+PPU A01
+PPU A00
 
 ```
