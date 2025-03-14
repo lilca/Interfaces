@@ -12,6 +12,15 @@ Editing now.
 ## Ram Adapter <-> Disk Drive
 ### Connector
 
+```
+ 
+ /-----------------\
+/                   \
+ / 1  2  3  4  5  6 |
+|                   |
+|  7  8  9 10 11 12 |
++-------------------+
+```
 # その他
 * Clock = 96.4 kHz (T = 10.37=10.373...[us])
 * Modulation = MFM  // MFM変調
