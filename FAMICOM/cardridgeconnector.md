@@ -45,3 +45,4 @@ PPU D3   |29    59| PPU D5
 
 # 参考文献
 [Cartridge connector, NES Dev](https://www.nesdev.org/wiki/Cartridge_connector)
+[ファミコンカートリッジコネクタ仕様](https://gamernium.com/archives/1357)
