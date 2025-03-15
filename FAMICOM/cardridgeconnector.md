@@ -44,6 +44,27 @@ PPU D3   <> |29    59| <> PPU D5
              \-------+
 ```
 
+|項目|説明|
+|:-:|:-|
+|CPU A0-A14||
+|CPU /A15||
+|CPU R/W||
+|CPU D0-D7||
+|PPU A0-A13||
+|PPU /A13||
+|PPU /RD||
+|PPU /WR||
+|PPu D0-D7||
+|+5V||
+|GND||
+|RF Vcc||
+|/IRQ||
+|M2||
+|VRAM A10||
+|VRAM /CE||
+|Audio from 2A03||
+|Audio to RF||
+
 # 参考文献
 [Cartridge connector, NES Dev](https://www.nesdev.org/wiki/Cartridge_connector)
 
