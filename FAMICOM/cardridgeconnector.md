@@ -62,7 +62,7 @@ PPU D3   <> |29    59| <> PPU D5
 |M2||
 |VRAM A10||
 |VRAM /CE||
-|SOUND IN|本体からのカセットへのサウンド|
+|SOUND IN|APUからの出力をカセットへ|
 |SOUND OUT|カセット音源があればSOUND INとミックスして出力|
 
 # 参考文献
