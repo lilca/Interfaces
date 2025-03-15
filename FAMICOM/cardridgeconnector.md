@@ -62,8 +62,8 @@ PPU D3   <> |29    59| <> PPU D5
 |M2||
 |VRAM A10||
 |VRAM /CE||
-|Audio from 2A03||
-|Audio to RF||
+|SOUND IN|本体からのカセットへのサウンド|
+|SOUND OUT|カセット音源があればSOUND INとミックスして出力|
 
 # 参考文献
 [Cartridge connector, NES Dev](https://www.nesdev.org/wiki/Cartridge_connector)
