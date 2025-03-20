@@ -23,20 +23,20 @@ Editing now.
 
 ```
 
-|No|色|名前|読み書き|
-|:-:|:-:|:-:|:-|
-|1|茶|/Write Gate||
-|2||Vcc 5V||
-|3|橙|/Motor|0=メディアをスキャン|
-|4|黄|GND||
-|5|緑|/Write Data||
-|6|青|Battery Sence||
-|7|紫|/Write Protect||
-|8|灰|Vcc Out||
-|9|白|Read Data||
-|10|黒|/Media Set||
-|11|桃|/Ready||
-|12|水|/Reset|0=モーターを止める|
+|No|色|名前|RAM-Drive|説明|
+|:-:|:-:|:-:|:-|:-|
+|1|緑|/Write Gate|->||
+|2||Vcc Out|<-?||
+|3|水|Vcc 5V|->||
+|4|青|/Motor|->|0=メディアをスキャン|
+|5|茶|GND|-||
+|6|橙|/Write Data|->||
+|7|桃|Battery Sence|<-||
+|8|灰|/Write Protect|<-||
+|9|黄|Read Data|<-||
+|10|黒|/Media Set|<-||
+|11|白|/Ready|<-||
+|12|紫|/Reset|->|0=モーターを止める|
 
 # その他
 * Clock = 96.4 kHz (T = 10.37=10.373...[us])
