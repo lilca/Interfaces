@@ -13,13 +13,31 @@ Editing now.
 ### Connector
 
 ```
- 
+ ドライブ側のメス端子を正面に見て
+
  /-----------------\
-/  1  2  3  4  5  6 \
+/  2  4  6  8 10 12 \
 |                   |
-|  7  8  9 10 11 12 |
+|  1  3  5  7  9 11 |
 +-------------------+
+
 ```
+
+|No|名前|読み書き|
+|:-:|:-:|:-|
+|1|/Write Gate||
+|2|Vcc 5V||
+|3|/Motor|0=メディアをスキャン|
+|4|GND||
+|5|/Write Data||
+|6|Battery Sence||
+|7|/Write Protect||
+|8|Vcc Out||
+|9|Read Data||
+|10|/Media Set||
+|11|/Ready||
+|12|/Reset|0=モーターを止める|
+
 # その他
 * Clock = 96.4 kHz (T = 10.37=10.373...[us])
 * Modulation = MFM  // MFM変調
