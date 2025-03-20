@@ -23,20 +23,20 @@ Editing now.
 
 ```
 
-|No|名前|読み書き|
-|:-:|:-:|:-|
-|1|/Write Gate||
-|2|Vcc 5V||
-|3|/Motor|0=メディアをスキャン|
-|4|GND||
-|5|/Write Data||
-|6|Battery Sence||
-|7|/Write Protect||
-|8|Vcc Out||
-|9|Read Data||
-|10|/Media Set||
-|11|/Ready||
-|12|/Reset|0=モーターを止める|
+|No|色|名前|読み書き|
+|:-:|:-:|:-:|:-|
+|1|茶|/Write Gate||
+|2||Vcc 5V||
+|3|橙|/Motor|0=メディアをスキャン|
+|4|黄|GND||
+|5|緑|/Write Data||
+|6|青|Battery Sence||
+|7|紫|/Write Protect||
+|8|灰|Vcc Out||
+|9|白|Read Data||
+|10|黒|/Media Set||
+|11|桃|/Ready||
+|12|水|/Reset|0=モーターを止める|
 
 # その他
 * Clock = 96.4 kHz (T = 10.37=10.373...[us])
