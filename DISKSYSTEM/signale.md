@@ -1,16 +1,20 @@
+# ディスクシステムの仕組み
 Editing now.
+
+* 正確性の保証はないことに注意
+
 [ここの情報を整理しようと思う](http://kitahei88.blog.fc2.com/blog-category-4-2.html)
-# 書き込みプロテクト
-## 見分け方
+## 書き込みプロテクト
+### 見分け方
 - 付属のRAMアダプターがツルツルがプロテクトなし、ザラザラはプロテクト有り
 - ドライブ基板の番号が01~03はプロテクトなし、04と05はプロテクト有り
 
-## 参考文献
+### 参考文献
 [FDS Stickでディスクシステムのゲームを書き込んでみる](https://ameblo.jp/koudaken7777/entry-12648274550.html)
 
-# Signal(信号)
-## Ram Adapter <-> Disk Drive
-### Connector
+## Signal(信号)
+### Ram Adapter <-> Disk Drive
+#### Connector
 
 ```
  ドライブ側のメス端子を正面に見て
@@ -31,21 +35,41 @@ Editing now.
 |4|青|/Motor|->|0=メディアをスキャン|
 |5|茶|GND|-||
 |6|橙|/Write Data|->|ディスクへの書込みデータ|
-|7|桃|Battery Sence|<-|バッテリの有無|
+|7|桃|Battery Sence|<-|バッテリの有無?|
 |8|灰|/Write Protect|<-||
 |9|黄|Read Data|<-|ディスクからの読込みデータ|
 |10|黒|/Media Set|<-|0=ディスク有|
 |11|白|/Ready|<-||
 |12|紫|/Reset|->|0=モーターを止める|
+
 '/' は反転
 
-# その他
-* Clock = 96.4 kHz (T = 10.37=10.373...[us])
+## ステータス
+
+|項目|電<br>源<br>O<br>N|デ<br>ィ<br>ス<br>ク<br>挿<br>入|M<br>o<br>t<br>r<br>o<br>r<br> <br>O<br>n|ヘ<br>ッ<br>ダ<br>初<br>期<br>化<br>*|外<br>周<br>到<br>達<br>*|読<br>み<br>込<br>み<br>*|内<br>周<br>到<br>達<br>*||M<br>o<br>t<br>o<br>r<br> <br>O<br>f<br>f||R<br>e<br>s<br>e<br>t|
+|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|<h4>ドライブステータス</h4>||||||||||||
+|/Media Set||L|-|-|-|-|-||L||L|
+|/Writable Protect||L|-|-|-|-|-||L||L|
+|/Ready|||||L|L||||||
+|<h4>データ</h4>||||||||||||
+|Read Data|L|-|-|-|D|D|L||L||L|
+|<h4>イベント</h4>||||||||||||
+|/Reset|||||||||||L|
+|/Mortor|||L|-|-|-|-|||||
+
+- 未記入は'H'レベル
+- 'D'は、データ信号
+- '-'は、直前と同じ
+- '*' の工程は、Motorがオン(/Motor=L)の間繰り返す
+
+## その他
+* Clock = 96.4 kHz (T = 10.37=10.373443983402...[us])
 * Modulation = MFM  // MFM変調
 * Sending data to order LSB to MSB
 * I/O Level = 5V
 
-# MFM変調
+## MFM変調
 * クロックビット、データビットの順番で送信する
 * クロックビットは通常０
 * ただし、前のデータビットと今のデータビットがゼロの場合、クロックビットは１
@@ -60,7 +84,7 @@ Send data =X100010010010001
 (X は未確定)
 ```
 
-## クロックアップ周期(Term of clock-up)
+### クロックアップ周期(Term of clock-up)
 
 |-|-|-|-|-|Term|
 |:-|:-:|:-:|:-:|:-:|-:|
@@ -75,8 +99,12 @@ Send data =X100010010010001
 |111|X1|01|||1T|
 'X'は未知のビット(0 or 1)
 
+* 1T = 1/96.4kHz = 10.373443983402... = 10.37[us]
+* 1.5T = 1/96.4kHz x 1.5 = 15.560165975103... = 15.56[us]
+* 2T = 1/96.4kHz x 2 = 20.746887966804... = 20.75[us]
 
-## References(参考文献)
+
+### References(参考文献)
 [ディスクシステムローダー（セーバー）の準備:レトロゲーム漫遊記](http://kitahei88.blog.fc2.com/blog-entry-102.html)
 [ディスクシステムローダー（セーバー）の準備　その2:レトロゲーム漫遊記](http://kitahei88.blog.fc2.com/blog-entry-103.html#more)
 [jfdsloadr.txt:エミュレートステーション](http://www.emusta.net/jfdsloadr.txt)
