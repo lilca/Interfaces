@@ -3,6 +3,13 @@ Editing now.
 
 * 正確性の保証はないことに注意
 
+## 基本情報
+* ディスク容量(片面) = 8[KB] = 8192[Byte] = 65536[bit] 
+* Clock = 96.4[kHz] (T = 10.37=10.373443983402...[us])
+* Modulation = MFM  // MFM変調
+* Sending data to order LSB to MSB
+* I/O Level = 5V
+
 [ここの情報を整理しようと思う](http://kitahei88.blog.fc2.com/blog-category-4-2.html)
 ## 書き込みプロテクト
 ### 見分け方
@@ -62,12 +69,6 @@ Editing now.
 - 'D'は、データ信号
 - '-'は、直前と同じ
 - '*' の工程は、Motorがオン(/Motor=L)の間繰り返す
-
-## その他
-* Clock = 96.4 kHz (T = 10.37=10.373443983402...[us])
-* Modulation = MFM  // MFM変調
-* Sending data to order LSB to MSB
-* I/O Level = 5V
 
 ## MFM変調
 * クロックビット、データビットの順番で送信する
