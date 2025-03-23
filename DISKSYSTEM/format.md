@@ -49,13 +49,36 @@
 
 ## *1 CRC
 
-|パラメータ|値|
-|:-:|:-:|
-|多公式|$1021|
-|初期値|$0000|
-|入力反転|true|
-|出力反転|true|
-|XOR値|$0000|
+```
+
+uint16_t getCRCValue(uint8_*dataStream, size_t size) {
+  uint16_t poly      = 0x1021;
+  uint16_t iValue    = 0x0000;
+  bool iReflect      = ture;
+  bool oReflect      = ture;
+  uint16_t xorValue  = 0x0000;
+
+  uint16_t crcValue = iValue;              // 初期値設定
+  for (size_t idx=0; idx<size; idx++) {
+    uint8_t val = *dataStream;
+    val = iReflect ? reflect8(val) : val;  // 入力をリフレクション(ビット順序反転)
+    crcValue = crcValue ^ ((uint16_t)val << 8);
+    for (size_t jdx=0; jdx<8; jdx++) {
+      
+    }
+  }
+  val = oReflect ? reflect8(val) : val;  // 出力をリフレクション(ビット順序反転)
+}
+
+```
+
+|パラメータ|変数名|値|
+|:-:|:-:|:-:|
+|多公式|poly|$1021|
+|初期値|iValue|$0000|
+|入力反転|iReflect|ture|
+|出力反転|oReflect|ture|
+|XOR値|xorValue|$0000|
 
 ## 参考文献
 
