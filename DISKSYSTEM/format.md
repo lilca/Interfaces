@@ -60,11 +60,11 @@ uint16_t getCRCValue(uint8_*dataStream, size_t size) {
   uint16_t xorValue  = 0x0000;  // 最終XOR値
 
   uint16_t crcValue = initCrc;                 // 初期値設定
-  for (size_t idx=0; idx<size; idx++) {
+  for (int idx=0; idx<size; idx++) {
     uint8_t val = *dataStream++;               // データの読み込みとポインタのインクリメント
     val = iReflect ? reflect(val, 8) : val;    // 入力をリフレクション(ビット順序反転)
     crcValue = crcValue ^ ((uint16_t)val << 8);// 上位8ビットに配置してXOR
-    for (size_t jdx=0; jdx<8; jdx++) {
+    for (int jdx=0; jdx<8; jdx++) {
       if ((crcValue & 0x8000) == 0) {
         crcValue = crcValue << 1;              // 単純な左シフト
       } else {
@@ -74,7 +74,8 @@ uint16_t getCRCValue(uint8_*dataStream, size_t size) {
   }
   crcValue = oReflect ? reflect(crcValue, 16) : crcValue;
                                                // 出力をリフレクション(ビット順序反転)
-  return crcValue ^ xorValue;                  // 最終XOR処理
+  crcValue = crcValue ^ xorValue;              // 最終XOR処理
+  return crcValue;
 }
 
 ```
