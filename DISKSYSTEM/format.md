@@ -61,13 +61,18 @@ uint16_t getCRCValue(uint8_*dataStream, size_t size) {
   uint16_t crcValue = iValue;              // 初期値設定
   for (size_t idx=0; idx<size; idx++) {
     uint8_t val = *dataStream;
-    val = iReflect ? reflect8(val) : val;  // 入力をリフレクション(ビット順序反転)
+    val = iReflect ? reflect(val, 8) : val;  // 入力をリフレクション(ビット順序反転)
     crcValue = crcValue ^ ((uint16_t)val << 8);
     for (size_t jdx=0; jdx<8; jdx++) {
-      
+      if ((crcValue & 0x8000) == 0) {
+        crcValue = crcValue << 1;
+      } else {
+        crcValue = (crcValue << 1 ) ^ poly;
+      }
     }
   }
-  val = oReflect ? reflect8(val) : val;  // 出力をリフレクション(ビット順序反転)
+  crcValue = oReflect ? reflect(val, 16) : val;  // 出力をリフレクション(ビット順序反転)
+  return crcValue ^ xorValue;
 }
 
 ```
