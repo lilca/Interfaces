@@ -50,8 +50,10 @@
 ## *1 CRC
 
 ```
-
+//
 // CRC16/Kermitアルゴリズム
+//  uint16_t reflect(uint16_t val, int size)は、ビットの順序を反転する関数
+//
 uint16_t getCRCValue(uint8_*dataStream, size_t size) {
   uint16_t poly      = 0x1021;  // 生成多項式
   uint16_t initCrc   = 0x0000;  // CRC初期値
