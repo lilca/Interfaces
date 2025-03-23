@@ -51,28 +51,30 @@
 
 ```
 
+// CRC16/Kermitアルゴリズム
 uint16_t getCRCValue(uint8_*dataStream, size_t size) {
-  uint16_t poly      = 0x1021;
-  uint16_t iValue    = 0x0000;
-  bool iReflect      = ture;
-  bool oReflect      = ture;
-  uint16_t xorValue  = 0x0000;
+  uint16_t poly      = 0x1021;  // 生成多項式
+  uint16_t initCrc   = 0x0000;  // CRC初期値
+  bool iReflect      = true;    // 入力のビット反転(順序)
+  bool oReflect      = true;    // 出力のビット反転(順序)
+  uint16_t xorValue  = 0x0000;  // 最終XOR値
 
-  uint16_t crcValue = iValue;              // 初期値設定
+  uint16_t crcValue = initCrc;                 // 初期値設定
   for (size_t idx=0; idx<size; idx++) {
-    uint8_t val = *dataStream;
-    val = iReflect ? reflect(val, 8) : val;  // 入力をリフレクション(ビット順序反転)
-    crcValue = crcValue ^ ((uint16_t)val << 8);
+    uint8_t val = *dataStream++;               // データの読み込みとポインタのインクリメント
+    val = iReflect ? reflect(val, 8) : val;    // 入力をリフレクション(ビット順序反転)
+    crcValue = crcValue ^ ((uint16_t)val << 8);// 上位8ビットに配置してXOR
     for (size_t jdx=0; jdx<8; jdx++) {
       if ((crcValue & 0x8000) == 0) {
-        crcValue = crcValue << 1;
+        crcValue = crcValue << 1;              // 単純な左シフト
       } else {
-        crcValue = (crcValue << 1 ) ^ poly;
+        crcValue = (crcValue << 1 ) ^ poly;    // 多項式で割る
       }
     }
   }
-  crcValue = oReflect ? reflect(val, 16) : val;  // 出力をリフレクション(ビット順序反転)
-  return crcValue ^ xorValue;
+  crcValue = oReflect ? reflect(crcValue, 16) : crcValue;
+                                               // 出力をリフレクション(ビット順序反転)
+  return crcValue ^ xorValue;                  // 最終XOR処理
 }
 
 ```
