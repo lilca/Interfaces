@@ -30,3 +30,7 @@
 |:-:|:-:|:-|
 |7<br>6<br>5<br>4<br>3<br>2<br>1<br>0|A<br>A<br>A<br>A<br>A<br>A<br>A<br>A|VRAMアドレスの下位8ビット<br>0-255|
 
+## PPUDATA($2007)
+|ビット||書き込みのみ(1回目)|
+|:-:|:-:|:-|
+|7<br>6<br>5<br>4<br>3<br>2<br>1<br>0|D<br>D<br>D<br>D<br>D<br>D<br>D<br>D|VRAMアドレスへ読み書きするデータ<br>0-255|
