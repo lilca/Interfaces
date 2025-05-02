@@ -6,7 +6,6 @@
 |$0000-$0FFF|パターンテーブル(LOW)|
 |$1000-$1FFF|パターンテーブル(HIGH)|
 |[ネームテーブル](https://github.com/lilca/Interfaces/blob/master/FAMICOM/PPU/NameTable.md)||
-|ネームテーブル||
 |$2000-$23BF|ネームテーブル #0(画面1)|
 |$23C0-$23FF|属性テーブル #0|
 |$2400-$27BF|ネームテーブル #1(画面2)|
