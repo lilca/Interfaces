@@ -2,7 +2,7 @@
 ## アドレスマップ
 |アドレス|内容|
 |:-:|:-|
-|[パターンテーブル]()||
+|[パターンテーブル](https://github.com/lilca/Interfaces/blob/master/FAMICOM/PPU/CharPatternTable.md)||
 |$0000-$0FFF|パターンテーブル(LOW)|
 |$1000-$1FFF|パターンテーブル(HIGH)|
 |ネームテーブル||
