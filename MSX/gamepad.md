@@ -21,7 +21,7 @@
 | 5| I | VCC(5V)|5|
 | 6| - | A button|9|
 | 7| - | B button|6|
-| 8| - | COM(GND)||
+| 8| - | COM(GND)|(Don't connect 7 because it's selector.)|
 | 9| - | GND     |8|
 
  I = Input to PAD
