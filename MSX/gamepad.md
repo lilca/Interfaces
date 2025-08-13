@@ -32,4 +32,5 @@
 
 ## Reference
 [THE・ATARI](https://nesmd.nomaki.jp/gemepad.html)
+
 [MSX⇔旧セガハード](https://nesmd.nomaki.jp/sg.html)
