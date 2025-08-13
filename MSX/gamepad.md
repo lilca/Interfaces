@@ -12,17 +12,17 @@
 
 ## PIN ASIGN
 
-|No|I/O| Detail   |
-|:-:|:-:|:-:|
-| 1| - | UP   |
-| 2| - | DOWN |
-| 3| - | LEFT |
-| 4| - | RIGHT|
-| 5| I | VCC(5V)|
-| 6| - | A button|
-| 7| - | B button|
-| 8| - | COM(GND)|
-| 9| - | GND     |
+|No|I/O| Detail   |MD Pad|
+|:-:|:-:|:-:|:-:|
+| 1| - | UP   ||
+| 2| - | DOWN ||
+| 3| - | LEFT ||
+| 4| - | RIGHT||
+| 5| I | VCC(5V)||
+| 6| - | A button||
+| 7| - | B button||
+| 8| - | COM(GND)||
+| 9| - | GND     ||
 
  I = Input to PAD
  
