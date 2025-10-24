@@ -1,0 +1,110 @@
+完璧な流れですね。
+次は、「SRAM → Arduino → Mac」方向の読み出し＋受信構成です。
+
+
+---
+
+🧠 概要
+
+要素	内容
+
+SRAMチップ	23LC512 × 2（各64KB）
+Arduino側	SPIで順に2チップ読み出して、Serialに128KB送信
+Mac側	Serialで受信し、バイナリファイル sram_dump.bin に保存
+通信速度	115200bps（前のコードと同じ）
+
+
+
+---
+
+✅ Arduino Uno 側コード（C）
+
+以下は、前回の書き込みコードと同じ配線で動く「読み出し用スケッチ」です。
+
+#include <SPI.h>
+
+#define SRAM1_CS 10
+#define SRAM2_CS 9
+
+#define SRAM_READ  0x03
+#define MODE_BYTE  0x01
+#define MODE_SEQUENTIAL 0x40
+
+void setup() {
+  Serial.begin(115200);
+  SPI.begin();
+
+  pinMode(SRAM1_CS, OUTPUT);
+  pinMode(SRAM2_CS, OUTPUT);
+  digitalWrite(SRAM1_CS, HIGH);
+  digitalWrite(SRAM2_CS, HIGH);
+
+  setSequentialMode(SRAM1_CS);
+  setSequentialMode(SRAM2_CS);
+
+  Serial.println("Type 'D' and press Enter to dump 128KB from SRAM.");
+}
+
+void loop() {
+  if (Serial.available()) {
+    char c = Serial.read();
+    if (c == 'D' || c == 'd') {
+      Serial.println("Dumping SRAM contents...");
+      dumpSRAM();
+      Serial.println("Done!");
+    }
+  }
+}
+
+// === シーケンシャルモード設定 ===
+void setSequentialMode(uint8_t csPin) {
+  digitalWrite(csPin, LOW);
+  SPI.transfer(MODE_BYTE);
+  SPI.transfer(MODE_SEQUENTIAL);
+  digitalWrite(csPin, HIGH);
+}
+
+// === SRAMから全データを読み取って送信 ===
+void dumpSRAM() {
+  const uint32_t totalSize = 128UL * 1024UL;
+  uint8_t data;
+
+  // --- SRAM1 (0〜65535)
+  digitalWrite(SRAM1_CS, LOW);
+  SPI.transfer(SRAM_READ);
+  SPI.transfer(0x00);  // high address
+  SPI.transfer(0x00);  // low address
+  for (uint32_t i = 0; i < 65536UL; i++) {
+    data = SPI.transfer(0x00);
+    Serial.write(data);
+  }
+  digitalWrite(SRAM1_CS, HIGH);
+
+  // --- SRAM2 (65536〜131071)
+  digitalWrite(SRAM2_CS, LOW);
+  SPI.transfer(SRAM_READ);
+  SPI.transfer(0x00);
+  SPI.transfer(0x00);
+  for (uint32_t i = 0; i < 65536UL; i++) {
+    data = SPI.transfer(0x00);
+    Serial.write(data);
+  }
+  digitalWrite(SRAM2_CS, HIGH);
+}
+
+
+---
+
+✅ Mac側 Python 受信コード
+
+このスクリプトは：
+
+1. 利用可能なシリアルポートを表示して選択
+
+
+2. Arduinoに 'D' コマンド送信
+
+
+3. 128KB（=131072バイト）を
+
+
