@@ -20,7 +20,7 @@ print("利用可能なシリアルポート:")
 for i, port in enumerate(ports):
     print(f"{i}: {port.device} ({port.description})")
 
-# 番号入力
+# ポート番号入力
 choice = input("使用するポート番号を入力してください: ")
 
 # 無効な番号なら終了
@@ -33,17 +33,27 @@ except (ValueError, IndexError):
 #------------------------------
 # シリアル接続
 #------------------------------
+# bps設定
 baudrate = 115200  # ATmega328P側と合わせる
+
+# シリアル通信設定
 ser = serial.Serial(port_name, baudrate, timeout=1)
+
+# 初期化待ち？
 time.sleep(2)  # リセット待ち（Arduino系は必要）
 
-# === ランダムデータ生成 ===
+#------------------------------
+# ランダムデータ生成
+#------------------------------
+# データサイズは128KB
 data_size = 128 * 1024  # 128KB
 print(f"{data_size} バイトのランダムデータを送信します...")
 
-# === 送信 ===
+# データ送信
 chunk_size = 1024  # 一度に送るブロックサイズ
 sent = 0
+
+# データサイズになるまで送る
 while sent < data_size:
     block = bytes([random.randint(0, 255) for _ in range(min(chunk_size, data_size - sent))])
     ser.write(block)
