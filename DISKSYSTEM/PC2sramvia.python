@@ -47,19 +47,12 @@ time.sleep(2)  # リセット待ち（Arduino系は必要）
 #------------------------------
 # データサイズは128KB
 data_size = 128 * 1024  # 128KB
+data = bytes([ramdom.randint(0, 255) for _ in range(data_size)])
 print(f"{data_size} バイトのランダムデータを送信します...")
 
 # データ送信
-chunk_size = 1024  # 一度に送るブロックサイズ
-sent = 0
-
-# データサイズになるまで送る
-while sent < data_size:
-    block = bytes([random.randint(0, 255) for _ in range(min(chunk_size, data_size - sent))])
-    ser.write(block)
-    sent += len(block)
-    print(f"\r送信中... {sent}/{data_size} bytes", end="")
-    sys.stdout.flush()
+ser.write(data)
+sys.stdout.flush()
 
 print("\n送信完了。")
 
