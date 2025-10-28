@@ -52,6 +52,7 @@ print(f"{data_size} バイトのランダムデータを送信します...")
 
 # データ送信
 ser.write(data)
+# バッファの残りを出力する
 sys.stdout.flush()
 
 print("\n送信完了。")
