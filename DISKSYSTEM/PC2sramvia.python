@@ -4,24 +4,35 @@ import random
 import time
 import sys
 
-# === シリアルポート選択 ===
+#------------------------------
+# シリアルポート選択
+#------------------------------
+# ポート取得
 ports = list(serial.tools.list_ports.comports())
+
+# ポートがなければ終了
 if not ports:
     print("シリアルポートが見つかりません。デバイスを接続してください。")
     sys.exit(1)
 
+# ポート一覧表示
 print("利用可能なシリアルポート:")
 for i, port in enumerate(ports):
     print(f"{i}: {port.device} ({port.description})")
 
+# 番号入力
 choice = input("使用するポート番号を入力してください: ")
+
+# 無効な番号なら終了
 try:
     port_name = ports[int(choice)].device
 except (ValueError, IndexError):
     print("無効な選択です。")
     sys.exit(1)
 
-# === シリアル接続 ===
+#------------------------------
+# シリアル接続
+#------------------------------
 baudrate = 115200  # ATmega328P側と合わせる
 ser = serial.Serial(port_name, baudrate, timeout=1)
 time.sleep(2)  # リセット待ち（Arduino系は必要）
