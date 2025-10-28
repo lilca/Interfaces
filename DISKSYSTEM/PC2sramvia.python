@@ -47,13 +47,11 @@ time.sleep(2)  # リセット待ち（Arduino系は必要）
 #------------------------------
 # データサイズは128KB
 data_size = 128 * 1024  # 128KB
-data = bytes([ramdom.randint(0, 255) for _ in range(data_size)])
+data = bytes([random.randint(0, 255) for _ in range(data_size)])
 print(f"{data_size} バイトのランダムデータを送信します...")
 
 # データ送信
 ser.write(data)
-# バッファの残りを出力する
-sys.stdout.flush()
 
 print("\n送信完了。")
 
