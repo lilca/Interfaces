@@ -68,14 +68,7 @@ uint8_t sramReadByte(uint8_t csPin, uint32_t addr) {
   return val;
 }
 
-// ---------- 立ち上がり間隔分類 ----------
-uint8_t classifyInterval(uint32_t dt) {
-  // dt in micros()
-  if (dt < 13) return 0;      // 10.37us
-  else if (dt < 18) return 1; // 15.56us
-  else return 2;              // 20.75us
-}
-
+// ---------- スタート ----------
 void setup() {
   // PCとのボーレート
   Serial.begin(115200);
@@ -102,6 +95,7 @@ void setup() {
   SPI.begin();
 }
 
+// ---------- ループ ----------
 void loop() {
   // /media が OFF になったら読み込み開始
   while(digitalRead(MEDIA_PIN) == HIGH);
@@ -114,6 +108,7 @@ void loop() {
 
   // readyがLOWの間読み込む
   while(digitalRead(READY_PIN) == LOW) {
+     
   }
   // 読み込み指示取り消し
   digitalWrite(MONITOR_PIN, HIGH);
@@ -133,6 +128,10 @@ void loop() {
     }
     delay(1000); // 1秒程度待って、連続送信防止
   }
+
+  // ディスクシステムをリセット
+  digitalWrite(RESET_PIN, LOW);
+  digitalWrite(RESET_PIN, HIGH);
 }
 
 
