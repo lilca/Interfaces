@@ -14,23 +14,21 @@
 //  /ready 入力
 //  read 入力
 //  /monitor 出力
-
-/reset 出力
-
-
-立ち上がり間隔計測（10.37, 15.56, 20.75 μs）を分類してSRAMに保存
-
-SRAM への書き込みはシーケンシャル
-
-/media がONになったらPCへ128KB送信
-
+//  /reset 出力
+//
+// 立ち上がり間隔計測
+//  10.37,15.56,20.75 μsを分類してSRAMに保存
+//
+// SRAM への書き込みはシーケンシャル
+// 
+// /media がONになったらPCへ128KB送信
+//
 //=================================
 
----
 
 #include <SPI.h>
 
-// ---------- SRAM設定 ----------
+// ---------- SRAMチップセレクタ ----------
 #define CS1 10
 #define CS2 9
 
@@ -45,9 +43,7 @@ SRAM への書き込みはシーケンシャル
 #define SRAM_WRITE 0x02
 #define SRAM_READ  0x03
 
-// ---------- 計測パラメータ ----------
-#define DATA_SIZE (128 * 1024) // 128KB
-#define LFSR_SEED 0xACE1
+// ---------- 計測パラメータ ----------？
 
 volatile uint32_t lastRiseTime = 0;
 volatile uint32_t interval = 0;
@@ -81,13 +77,19 @@ uint8_t classifyInterval(uint32_t dt) {
 }
 
 void setup() {
-  Serial.begin(230400);
-  
+  // PCとのボーレート
+  Serial.begin(115200);
+
+  // チップセレクタを出力モードにしてHighに設定
+  // 全sram無効状態
   pinMode(CS1, OUTPUT);
   pinMode(CS2, OUTPUT);
   digitalWrite(CS1,HIGH);
   digitalWrite(CS2,HIGH);
 
+  // ディスクシステムの入出力モードを設定
+  // monitor=High(待機)
+  // reset=High(リセットでない)
   pinMode(MEDIA_PIN, INPUT_PULLUP);
   pinMode(READY_PIN, INPUT_PULLUP);
   pinMode(READ_PIN, INPUT_PULLUP);
@@ -96,6 +98,7 @@ void setup() {
   digitalWrite(MONITOR_PIN,HIGH);
   digitalWrite(RESET_PIN,HIGH);
 
+  // SPI通信初期化
   SPI.begin();
 }
 
