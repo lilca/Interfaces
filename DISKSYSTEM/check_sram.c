@@ -103,7 +103,7 @@ void setup() {
 }
 
 void loop() {
-  // 1. /media が OFF になったら読み込み開始
+  // /media が OFF になったら読み込み開始
   while(digitalRead(MEDIA_PIN) == HIGH);
 
   // 読み込み指示送信
