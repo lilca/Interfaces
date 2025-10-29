@@ -104,41 +104,31 @@ void setup() {
 
 void loop() {
   // 1. /media が OFF になったら読み込み開始
-  if(digitalRead(MEDIA_PIN) == LOW) {
-    digitalWrite(MONITOR_PIN, LOW); // 読み込み合図
+  while(digitalRead(MEDIA_PIN) == HIGH);
 
-    uint32_t sramAddr = 0;
-    while(digitalRead(READY_PIN) == LOW) {
-      // /readの立ち上がり検出
-      static uint8_t lastRead = HIGH;
-      uint8_t currRead = digitalRead(READ_PIN);
-      if(lastRead == LOW && currRead == HIGH) {
-        uint32_t now = micros();
-        if(lastRiseTime != 0) {
-          interval = now - lastRiseTime;
-          uint8_t val = classifyInterval(interval);
-          // SRAM書き込み
-          if(sramAddr < DATA_SIZE/2)
-            sramWriteByte(CS1, sramAddr, val);
-          else
-            sramWriteByte(CS2, sramAddr - DATA_SIZE/2, val);
-          sramAddr++;
-        }
-        lastRiseTime = now;
-      }
-      lastRead = currRead;
-    }
-    digitalWrite(MONITOR_PIN, HIGH); // 読み込み終了
+  // 読み込み指示送信
+  digitalWrite(MONITOR_PIN, LOW);
+
+  // readyの準備を待つ
+  while(digitalRead(READY_PIN) == HIGH);
+
+  // readyがLOWの間読み込む
+  while(digitalRead(READY_PIN) == LOW) {
   }
+  // 読み込み指示取り消し
+  digitalWrite(MONITOR_PIN, HIGH);
+  
 
-  // 2. /media が ON になったらPCへSRAM出力
-  if(digitalRead(MEDIA_PIN) == HIGH) {
-    for(uint32_t i=0;i<DATA_SIZE;i++){
+  // /media が ON になるまで待つなったら
+  while(digitalRead(MEDIA_PIN) == LOW);
+
+  // PCへ送信
+  for(uint32_t idx=0; idx<read_count; idx++){
       uint8_t b;
-      if(i < DATA_SIZE/2)
+      if(i < SIZE_OF_64KB)
         b = sramReadByte(CS1,i);
       else
-        b = sramReadByte(CS2,i - DATA_SIZE/2);
+        b = sramReadByte(CS2,i - SIZE_OF_64KB);
       Serial.write(b);
     }
     delay(1000); // 1秒程度待って、連続送信防止
