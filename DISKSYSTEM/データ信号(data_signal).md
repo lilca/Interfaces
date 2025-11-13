@@ -56,19 +56,23 @@ Editing now.
 |項目|電<br>源<br>O<br>N|デ<br>ィ<br>ス<br>ク<br>挿<br>入|M<br>o<br>t<br>r<br>o<br>r<br> <br>O<br>n|ヘ<br>ッ<br>ダ<br>初<br>期<br>化<br>*|外<br>周<br>到<br>達<br>*|読<br>み<br>込<br>み<br>*|内<br>周<br>到<br>達<br>*||M<br>o<br>t<br>o<br>r<br> <br>O<br>f<br>f||R<br>e<br>s<br>e<br>t|
 |:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |<h4>ドライブステータス</h4>||||||||||||
-|/Media Set||L|-|-|-|-|-||L||L|
-|/Writable Protect||L|-|-|-|-|-||L||L|
-|/Ready|||||L|L||||||
+|/Media Set             |H|L|-|-|-|-|-||L||L|
+|/Write Protect         |x|L(*1)|-|-|-|-|-||L||L|
+|/Ready                 |H||||L|L||||||
+|/Media Scan            |H||L|-|-|-|-|||||
 |<h4>データ</h4>||||||||||||
-|Read Data|L|-|-|-|D|D|L||L||L|
+|Read Data              |x|-|-|-|D|D|L||L||L|
 |<h4>イベント</h4>||||||||||||
-|/Reset|||||||||||L|
-|/Mortor|||L|-|-|-|-|||||
+|/Write Gate            |H/L|-|
+|/Stop Motor            |H|-|-|-|||||||L|
 
 - 未記入は'H'レベル
+- 'x'は、不明
 - 'D'は、データ信号
 - '-'は、直前と同じ
+- 'H/L'は、Readモード/Writeモード時の値
 - '*' の工程は、Motorがオン(/Motor=L)の間繰り返す
+- *1 メディアの爪が折れていないと想定
 
 ## MFM変調
 * クロックビット、データビットの順番で送信する
