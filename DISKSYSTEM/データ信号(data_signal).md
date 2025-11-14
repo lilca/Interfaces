@@ -39,7 +39,7 @@ Editing now.
 |1|緑|/Write Gate|->|0=Writeモード, 1=Readモード|
 |2||Vcc Out|<-?|ドライブからの電源出力？|
 |3|水|Vcc 5V|->|ドライブへの電源(RAMへは未接続)|
-|4|青|/Scan Media|<-|0=メディアをスキャン中|
+|4|青|/Scan Media|->|0=メディアをスキャン中|
 |5|茶|GND|-||
 |6|橙|Write Data|->|ディスクへの書込みデータ|
 |7|桃|Battery Sense|<-|0=バッテリーエラー, 1=バッテリOK|
