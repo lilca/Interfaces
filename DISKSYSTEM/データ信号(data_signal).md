@@ -53,26 +53,26 @@ Editing now.
 
 ## ステータス
 
-|項目|電<br>源<br>O<br>N|デ<br>ィ<br>ス<br>ク<br>挿<br>入|M<br>o<br>t<br>r<br>o<br>r<br> <br>O<br>n|ヘ<br>ッ<br>ダ<br>初<br>期<br>化<br>*|外<br>周<br>到<br>達<br>*|読<br>み<br>込<br>み<br>*|内<br>周<br>到<br>達<br>*||M<br>o<br>t<br>o<br>r<br> <br>O<br>f<br>f||R<br>e<br>s<br>e<br>t|
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|<h4>ドライブステータス</h4>||||||||||||
-|/Media Set             |H|L|-|-|-|-|-||L||L|
-|/Writable              |x|L(*1)|-|-|-|-|-||L||L|
-|/Ready                 |H||||L|L||||||
-|/Media Scan            |H||L|-|-|-|-|||||
-|<h4>データ</h4>||||||||||||
-|Read Data              |x|-|-|-|D|D|L||L||L|
-|<h4>イベント</h4>||||||||||||
-|/Write Gate            |H/L|-|
-|/Stop Motor            |H|-|-|-|||||||L|
+|項目|電<br>源<br>O<br>N|デ<br>ィ<br>ス<br>ク<br>挿<br>入|M<br>o<br>t<br>r<br>o<br>r<br> <br>O<br>n|ヘ<br>ッ<br>ダ<br>初<br>期<br>化<br>(*1)|外<br>周<br>到<br>達<br>(*1)|読<br>み<br>込<br>み<br>(*1)|内<br>周<br>到<br>達<br>(*1)||M<br>o<br>t<br>o<br>r<br> <br>O<br>f<br>f||R<br>e<br>s<br>e<br>t||デ<br>ィ<br>ス<br>ク<br>取<br>り<br>出<br>し|
+|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|<h4>ドライブステータス</h4>||||||||||||||
+|/Media Set             |H|L|-|-|-|-|-||L||L||H|
+|/Writable              |x|L(*2)|-|-|-|-|-||L||L||x|
+|/Ready                 |H|-|-|-|L|L|H||H||H||H|
+|<h4>データ</h4>||||||||||||||
+|Read Data              |x|x|x|x|D|D|x||x||x||x|
+|<h4>イベント</h4>||||||||||||||
+|/Write Gate            |H/L|-|-|-|-|-|-||H/L||H/L||H/L|
+|/Scan Media            |H|-|L(*3)|-|-|-|-||H||H||H|
+|/Stop Motor            |H|-|-|-|-|-|-||-||L|||
 
 - 未記入は'H'レベル
 - 'x'は、不明
 - 'D'は、データ信号
 - '-'は、直前と同じ
 - 'H/L'は、Readモード/Writeモード時の値
-- '*' の工程は、Motorがオン(/Motor=L)の間繰り返す
-- *1 メディアの爪が折れていないと想定
+- *1 の工程は、Motorがオン(/Motor=L)の間繰り返す
+- *2 メディアの爪が折れていないと想定
 
 ## MFM変調
 * クロックビット、データビットの順番で送信する
