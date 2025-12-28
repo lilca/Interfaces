@@ -19,8 +19,8 @@
 | 3| - | LEFT |3|
 | 4| - | RIGHT|4|
 | 5| I | VCC(5V)|5|
-| 6| - | A button|9|
-| 7| - | B button|6|
+| 6| - | A button(Left)|9|
+| 7| - | B button(Right)|6|
 | 8| - | COM(GND)|(Don't connect 7 because it's selector.)|
 | 9| - | GND     |8|
 
