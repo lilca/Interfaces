@@ -1,0 +1,27 @@
+// initialize
+toHigh(-Motor);
+toHigh(-Reset);
+
+// ディスクが入るまで
+while(-mediaSet == H);
+
+// スキャンメディア開始
+toLow(-Motor);
+
+// Readyになるまで
+while(-Ready == H)
+{
+  // メディアが抜けたら終わり
+  if(-mediaSet == H)
+    goto Terminal;
+}
+
+// Readyの間、読み込む
+while(-Ready == L)
+{
+  // 読み込み
+  a = ReadData;
+}
+
+// スキャンを終了
+toHigh(-Motor);
