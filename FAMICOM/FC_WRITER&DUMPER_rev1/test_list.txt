@@ -1,0 +1,9 @@
+1. 電源結線テスト
+  1-1. 245 20pin
+  1-2. 573(LOW) 20pin
+  1-3. 573(HIGH) 20pin
+  1-4. Cartridge 30pin
+
+2. データバス
+  2-1. CPU: 245の 3-9pin, Cartridgeの 43-36
+  2-2. PPU: 245の 3-9pin, Cartridgeの 26-29, 60-57pin
