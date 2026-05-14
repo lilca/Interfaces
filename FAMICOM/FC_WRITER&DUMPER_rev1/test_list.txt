@@ -14,5 +14,6 @@
   3-1. CPU: 573(LOW)の 19-12pin, Cartridgeの 13-6pin
   3-2. PPU: 573(LOW)の 19-12pin, Cartridgeの 25-19, 50pin
 
-4. アドレスバス(HIGH)
-  4-1. CPU: 573(HIGH)の 19-12pin, Cartridgeの 5-1, 33-35pin
+4. アドレスバス(HIGH) CPUは最上位(Q7)ビット未使用, PPUはQ6未使用、Q7はPPU_WR
+  4-1. CPU: 573(HIGH)の 19-13pin, Cartridgeの 5-1, 33-35pin
+  4-2. PPU: 573(HIGH)の 19-11pin, Cartridgeの 51-56pin
